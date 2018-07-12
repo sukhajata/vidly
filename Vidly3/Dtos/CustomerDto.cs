@@ -18,6 +18,8 @@ namespace Vidly3.Dtos
 
         public byte MembershipTypeId { get; set; }
 
+        public MembershipTypeDto MembershipType { get; set; }
+
         public DateTime? BirthDate { get; set; }
     }
 }
