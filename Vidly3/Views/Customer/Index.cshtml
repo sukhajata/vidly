@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Vidly3.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+        </tr>
+    </thead>
+    @foreach (var entry in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(entry.Name, "Edit", new { id = entry.Id }, null)</td>
+            <td>@entry.MembershipType.Name</td>
+        </tr>
+    }
+</table>
+
